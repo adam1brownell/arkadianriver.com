@@ -5,8 +5,7 @@ date: 2019-03-01
 categories:
   - data_blog
 excerpt: this is my first post
-image: http://w4.wallls.com/uploads/original/201711/17/wallls.com_143304.jpg
-image-sm: http://w4.wallls.com/uploads/original/201711/17/wallls.com_143304.jpg
+background-image: data_blog_imgs/startwhy.jpg
 ---
 
 > "He who has a why to live can bear almost any how" - Nietzsche`
