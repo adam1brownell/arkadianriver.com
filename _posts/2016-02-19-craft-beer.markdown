@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Craft Beer"
-excerpt: _excerpt_
+excerpt: this is about craft beer
 date: 2016-02-19
 categories:
-  - Juice
+  - beer
 description:
 background-image: https://picsum.photos/2000/1200?image=1003
 ---

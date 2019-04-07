@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Neuroanatomy 1: Brain & Neuron Basics"
-date: 2016-06-10
+title: "Behavioral Neuroscience I"
+excerpt: "Neuroanatomy pt.1: Brain & Neuron Basics"
+date: 2019-03-01
 categories:
-  - Neuroscience
+  - edu_bank
 description:
 image: http://sf.co.ua/14/03/wallpaper-1149266.jpg
 image-sm: http://sf.co.ua/14/03/wallpaper-1149266.jpg

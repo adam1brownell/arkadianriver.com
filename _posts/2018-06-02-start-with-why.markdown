@@ -1,21 +1,21 @@
 ---
 layout: post
 title: "Start with Why"
-date: 2018-06-04
+date: 2019-03-01
 categories:
-  - Personal
-description:
+  - data_blog
+excerpt: this is my first post
 image: http://w4.wallls.com/uploads/original/201711/17/wallls.com_143304.jpg
 image-sm: http://w4.wallls.com/uploads/original/201711/17/wallls.com_143304.jpg
 ---
 
-`"He who has a why to live can bear almost any how" - Nietzsche`
+> "He who has a why to live can bear almost any how" - Nietzsche`
 
 Whenever I let slip to my friends and family that I was interested in starting a blog, I was almost always asked the same question.
 
 Why?
 
-Apparently "for fun" wasn't a satisfactory answer. Nor was the more accurate answer "I want to talk about the brain and robots all the time." I realized if I wanted to be successful in blogging, my reason for blogging had to go deeper than fun.
+Apparently "for fun" wasn't a satisfactory answer. Nor was the more accurate answer "I want to talk about the brain and robots and data all the time." I realized if I wanted to be successful in blogging, my reason for blogging had to go deeper than fun.
 
 # Why did I start this blog?
 
@@ -43,7 +43,7 @@ I am doing this for me. An audience is just a bonus.
 
 I want to be a thought leader in artificial intelligence and cognitive science. That is something I would find deeply fulfilling. This blog is a step in the right direction.
 
-`Practice is vital in the journey of mastery. To be a master, you must fall in love with the process. - George Leonard`
+> "Practice is vital in the journey of mastery. To be a master, you must fall in love with the process" - George Leonard
 
 Continually blogging is the best strategy for cultivating  mastery of the subject. Researching relevant topics will help me practice and improve. Falling in love // getting excited about blog posts will keep me motivated, improving, and learning.
 
@@ -51,7 +51,7 @@ I may not be the most informed researcher or the best writer, but if my content 
 
 Information is so widely available now that it would be a missed opportunity not to try to take advantage. Becoming adept at learning outside of the classroom is crucial to success.
 
-`Formal education will make you a living. Self-education will make you a fortune - Jim Rohn`
+> "Formal education will make you a living. Self-education will make you a fortune" - Jim Rohn
 
 ## 3. To Keep Myself Accountable
 
@@ -59,16 +59,16 @@ All of this is all talk unless I actually do something about it.
 
 Setting good goals and keeping myself accountable is 80% of the work it takes for me to finish a project or start a new habit. If I have to produce results or hit metrics for someone to see, I am WAY more likely to succeed in my endeavor.
 
-`Accountability is the glue that ties commitment to result. - Bob Proctor`
+> "Accountability is the glue that ties commitment to result" - Bob Proctor
 
 Becoming an expert in CogSci/AI is my **goal**. This blog is my **deliverable**.  Producing consistent, high quality, and easy to digest content is my **metric** for success.
 
 ## 4. To Start
 **Starting** is the hardest part of anything. Writing this first post was *hard.* I kept second guessing my word-choice, my tone, and my style. But really those are trivial concerns in comparison to actually producing content.
 
-`My pencils are sharp enough. Even the dull ones will make a mark - Ze Frank`
+> "My pencils are sharp enough. Even the dull ones will make a mark" - Ze Frank
 
-Actually [here](https://www.youtube.com/watch?v=RYlCVwxoL_g) is Ze Frank's *Invocation for Beginnings* speech, one of my all time favorites. It is incredible. Might get it tatoo'd on myself. What I love about Ze's speach is that is strikes at the heart of what keeps me from starting-- from past failures to comparisons to bad impulses-- and how to deal with each in turn. I could do a whole blog post on the poem...
+Actually [here](https://www.youtube.com/watch?v=RYlCVwxoL_g) is Ze Frank's *Invocation for Beginnings* speech, one of my all time favorites. It is incredible. Might get it tatoo'd on myself. What I love about Ze's speech is that is strikes at the heart of what keeps me from starting-- from past failures to comparisons to bad impulses-- and how to deal with each in turn. I could do a whole blog post on the poem...
 
 I view this post as a living document; a space I can come back to and re-edict when I think of new reasons to write, and a space I rely on to recharge my motivation.
 

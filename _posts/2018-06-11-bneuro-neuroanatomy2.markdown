@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "Neuroanatomy 2: Tour of the Nervous System"
-date: 2016-06-11
+title: "Behavioral Neuroscience II"
+excerpt: "Neuroanatomy pt.2: Tour of the Nervous System"
+date: 2019-03-08
 categories:
-  - Neuroscience
+  - edu_bank
 description:
 image: http://sf.co.ua/14/03/wallpaper-1149266.jpg
 image-sm: http://sf.co.ua/14/03/wallpaper-1149266.jpg
