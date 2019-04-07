@@ -31,9 +31,8 @@ lang: en-us # used in HTML lang attributes
 #  title: _Your greeting_
 #  text: _Your detailed greeting text_
 # - displayed at the bottom
-closing-head: _Your closing_
-closing-para: _Your detailed closing_
-
+closing-head: Thanks for visiting!
+closing-para: Have some feedback? Drop me a line
 # on all pages (and the first three you list display with greeting, if included)
 social:
   #twitter:
