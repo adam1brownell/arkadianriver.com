@@ -8,7 +8,7 @@ categories:
 background-image: edu_imgs/neuron.jpg
 ---
 
-## Membrane Potential: How Neurons Work
+## <u>Membrane Potential</u>: How Neurons Work
 
 Neurons communicate by sending signals to each other called Action Potentials. To understand how action potentials work, we need to discuss few fundamental concepts of physics/chemistry  
 ### Diffusion of Ions

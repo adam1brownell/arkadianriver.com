@@ -8,7 +8,7 @@ categories:
 background-image: edu_imgs/neuron.jpg
 ---
 
-## Development: How our brains grow, individually and as a species
+## <u>Development</u>: How Brains Grow
 
 ### Brain Evolution
 First, before we discuss how our brains develop, we should answer the question:

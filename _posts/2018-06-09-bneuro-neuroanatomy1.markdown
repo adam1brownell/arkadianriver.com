@@ -9,7 +9,7 @@ background-image: edu_imgs/neuron.jpg
 ---
 
 
-##  _Neuroanatomy_: The Anatomy of the Brain
+##  <u>Neuroanatomy</u>: Anatomy of the Brain
 
 ### Things to Remember:
 1. The brain is _super_ complicated with a laundry list of parts + regions
