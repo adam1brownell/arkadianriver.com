@@ -5,9 +5,7 @@ excerpt: "Neuroanatomy pt.2: Tour of the Nervous System"
 date: 2019-03-08
 categories:
   - edu_bank
-description:
-image: http://sf.co.ua/14/03/wallpaper-1149266.jpg
-image-sm: http://sf.co.ua/14/03/wallpaper-1149266.jpg
+background-image: edu_imgs/neuron.jpg
 ---
 
  > Everything has to do with your nervous system -Jonathon Lipnicki

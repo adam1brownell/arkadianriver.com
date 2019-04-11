@@ -117,18 +117,28 @@ $baseurl: '{{ site.baseurl }}/images';
 		}
 	}
 
-	h2 {
+	h1 {
 		font-size: _font(hdr-size-xlarge);
-		line-height: 1.75em;
+		line-height: _font(hdr-lheight-large);
 
 		@include breakpoint(small) {
 			font-size: _font(hdr-size-large);
-			line-height: 1.65em;
+			line-height: _font(hdr-lheight-normal);
+		}
+	}
+
+	h2 {
+		font-size: _font(hdr-size-header);
+		line-height: _font(hdr-lheight-large);
+
+		@include breakpoint(small) {
+			font-size: _font(hdr-size-large);
+			line-height: _font(hdr-lheight-normal);
 		}
 	}
 
 	h3 {
-		font-size: _font(hdr-size-normal);
+		font-size: _font(hdr-size-large);
 		line-height: _font(hdr-lheight-large);
 
 		@include breakpoint(small) {

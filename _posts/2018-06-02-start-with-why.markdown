@@ -67,7 +67,11 @@ Becoming an expert in CogSci/AI is my **goal**. This blog is my **deliverable**.
 
 > "My pencils are sharp enough. Even the dull ones will make a mark" - Ze Frank
 
-Actually [here](https://www.youtube.com/watch?v=RYlCVwxoL_g) is Ze Frank's *Invocation for Beginnings* speech, one of my all time favorites. It is incredible. Might get it tatoo'd on myself. What I love about Ze's speech is that is strikes at the heart of what keeps me from starting-- from past failures to comparisons to bad impulses-- and how to deal with each in turn. I could do a whole blog post on the poem...
+Actually here is Ze Frank's *Invocation for Beginnings* speech, one of my all time favorites. It is incredible:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RYlCVwxoL_g" frameborder="0" allowfullscreen></iframe>
+
+ What I love about Ze's speech is that is strikes at the heart of what keeps me from starting-- from past failures to comparisons to bad impulses-- and how to deal with each in turn. I could do a whole blog post on the poem...
 
 I view this post as a living document; a space I can come back to and re-edict when I think of new reasons to write, and a space I rely on to recharge my motivation.
 
