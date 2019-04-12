@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Behavioral Neuroscience V"
-excerpt: "Hormones: How does our Brain communicate with the body?"
+excerpt: "How does our Brain communicate with the body?"
 date: 2019-04-01
 categories:
   - edu_bank
