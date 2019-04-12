@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Behavioral Neuroscience I"
-excerpt: "Neuroanatomy: What is the Brain made of?"
+excerpt: "What is the Brain made of?"
 date: 2019-03-01
 categories:
   - edu_bank

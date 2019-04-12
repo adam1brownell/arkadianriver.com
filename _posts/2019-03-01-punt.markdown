@@ -1,0 +1,19 @@
+---
+layout: post
+title: "NFL Concussion Prevention"
+date: 2019-03-12
+categories:
+  - data_blog
+excerpt:  "Using data to prevent professional concussions"
+background-image: data_blog_imgs/football.jpg
+---
+Over the holidays the National Football League (NFL) partnered with Kaggle and launched a contest to propose a data-driven rule change that would reduce concussions on punt plays without "negatively impacting the integrity of the game." Take a look at my proposal below:
+
+<style>
+.responsive-wrap iframe{ max-width: 100%;}
+</style>
+<div class="responsive-wrap">
+<!-- this is the embed code provided by Google -->
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQuf-uPrQ-V0w75MNUAS8ktiZwg9yGcLpbW0FaBUSZeHhVyOm3aL8qMWGWcsUkfw0CQseTOD_mTt9kY/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<!-- Google embed ends -->
+</div>

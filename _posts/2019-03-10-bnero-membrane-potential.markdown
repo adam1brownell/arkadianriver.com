@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Behavioral Neuroscience III"
-excerpt: "Membrane Potential: How do neurons work?"
+excerpt: "How do Neurons Work?"
 date: 2019-03-10
 categories:
   - edu_bank
@@ -11,7 +11,9 @@ background-image: edu_imgs/neuron.jpg
 ## <u>Membrane Potential</u>: How Neurons Work
 
 Neurons communicate by sending signals to each other called Action Potentials. To understand how action potentials work, we need to discuss few fundamental concepts of physics/chemistry  
+
 ### Diffusion of Ions
+
 **Diffusion** is the movement of a substance from high concentration to low concentration. Image food coloring being dropped into water—it slowly starts to spread out from area of high concentration (lots of food coloring) to areas with low concentration (no food coloring) until it is evenly distributed. When an **ion**, or charged particle, diffuses, something extra happens. As the charged particle spreads out to areas of low concentration, it starts to create a charge in these new areas. This new charge creates prevents new, similarly charged particles from entering. In a sense, it is diffusion for electricity/charge.
 
 For example, Sodium (Na+) has a positive charge. Imagine a high concentration of Na+ floating around a cell that has no Na+ inside it whatsoever (very low concentration). The moment that cell “allows” Na+ to enter, there is a HUGE rush of Na+ from the outside due to diffusion. As this flow occurs, the new positively-charged Na+ ions have given the cell an overall positive charge now. Remember: In electricity, similar charges repel each other. So, the positive charged cell starts to repel the Na+ outside the cell, and it gets harder and harder for new Na+ to rush inside. This is different than in the food coloring example, where diffusion will only stops once all areas have EQUAL concentrations—the charged particles make it so diffusion will stop prior to this point, leaving the cell with a slightly lower concentration of Na+ than the outside.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Behavioral Neuroscience II"
-excerpt: "Development: How does our Brain grow?"
+excerpt: "How does our Brain grow?"
 date: 2019-03-09
 categories:
   - edu_bank

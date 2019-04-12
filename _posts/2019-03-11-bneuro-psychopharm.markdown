@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Behavioral Neuroscience IV"
-excerpt: "Psychopharmacology: How do Drugs affect our Brain?"
+excerpt: "How do Drugs affect our Brain?"
 date: 2019-03-11
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg
 ---
 
-## <u>Psychopharmacology</u>y: How Drugs affect the Brain
+## <u>Psychopharmacology</u>: How Drugs affect the Brain
 
 Pharmacology is the attempt to influence biological systems (and their disorders) with drugs, and so **psychopharmacology** is the attempt to assuage problems found in mental systems with drugs. We will first discuss the different compounds and pathways present in the brain, and then talk about the effects common drugs have on these pathways.
 
