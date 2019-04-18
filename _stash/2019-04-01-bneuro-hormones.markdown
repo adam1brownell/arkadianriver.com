@@ -42,6 +42,18 @@ The **Pineal Gland** is a tiny gland at the top of the brainstem. It releases me
 
 The **Pancreas** sits right behind the stomach and is actually controlled by the **Vagas Nerve**, not the Pituitary/Hypothalamus. It releases two competing hormones: **Insulin**, which decreases blood sugar in anticipation of a meal, and **Glucagon** which increases blood sugar afterwards.
 
+### Sex and the Brain
+
+This is not a sex-ed recap, but rather a quick look at the effects of sex hormones on the nervous system and body. Despite the potential, talking about sex in behavioral neuroscience is not as sexy as one would hope.
+
+First, sex is determined by the **Sex-Determining-Region-of-the-Y-chromosome (SRY)**, which causes cells in the medulla to development into testes and promote male development. In absence of a Y chromosome and SRY, cells in the cortex will become ovaries instead.
+
+There are some neurological differences between sex as well. Male brains have motor neurons dedicated to ejaculation while female brains have motor neurons dedicated to contraction. The hypothalamus is also shown to statistically different between males and females.
+
+Estrogen and Testosterone are crucial to sexual behavior and organization. Developing testes produces testosterone and **anti-mulleran hormone (AMH)** which in absence of allows the created of fallopian tubes. A lack of testosterone abolishes male copulating behavior, but a large influx does not increase sexual arousal or performance; a very little is enough, more is not better. Estrogen production leads to ovulation as well as **Lordosis**, or as a neuroscience professor explained to me, the “head down, ass up” response.
+
+On sex itself: Human sexual response consists of four stages: excitement, plateau, orgasm, resolution. Men have only one site of erection, while women have many (breasts, nipples, clitoris, etc.). Males generally have a single brief orgasm followed by a refractory period lasting minutes to hours, while women can have several orgasms in a row. Sexual arousal is mediated by the parasympathetic system, and ejaculation is mediated by the sympathetic.
+
 ### Recap:
 1.	The brain, specifically the hypothalamus, communicates with other parts of the body through hormones. Hormones travel through the bloodstream and are regulated through negative feedback loops
 2.	Hormones regulate a multitude of things, from water retention to hunger to (potentially) love
