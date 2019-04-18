@@ -1,0 +1,173 @@
+---
+layout: post
+mathjax: true
+title: "Intro to Machine Learning I"
+excerpt: "What is Machine Learning?"
+date: 2019-03-02
+categories:
+  - edu_bank
+background-image: edu_imgs/ml.png
+---
+
+## <u>Machine Learning:</u> A Gentle Introduction with Linear Regression
+
+**Machine Learning (ML)** has become quite a buzzword over the past few years, and with good reason. It is incredibly powerful and can be used in pretty much every area of life. But what is it exactly?
+
+This post is designed to be a gentle introduction to the concept, and the first in the series on machine learning in general.
+
+An important quote to keep in mind:
+
+>“All models are wrong— but some are helpful”
+
+Every **statistical model** is simply a math function that embodies a set of assumptions about the data it is seeing. These assumptions can either can the model perform very well or very poorly. The job of a Machine Learning Engineer (very generally) is to pair the right model with given the data. I’m hoping these blog posts give you the basic tools to make similar judgements, or at least understand why an engineer made a certain decision.  
+
+**Machine Learning** is the process of teaching a computer (model) to understand some data, and ultimately make predictions about future unknown situations. There is a huge array of different methods and models that fit under this definition, but we will go over some basics.
+
+    <data points>
+
+Say we have a bunch of data points spread out over two variables. What we want to do is “fit” a line to these datapoints, that is to say, draw the best line that describes the data. Sometimes, drawing this line is really obvious to us:
+
+    <linear relationship>
+
+Sometimes not some much
+
+    <noise>
+
+The process of picking the best straight line for some data is called **Linear Regression**. Linear Regression can be thought of as attempting to model the relationship between variables.
+
+ (There are different methods to use if the line is not straight, but we’ll talk about that later.)
+
+In this post, our dummy problem is on the relationship between house square-footage and the asking price. On the X axis we have the independent variable, house square footage. On the Y axis, we have the dependent variable, asking price.
+
+We can draw a bunch of lines on this graph, but how do we know which one is best?
+
+    <graph with 3 lines>
+
+Most of the time, the data does not fit exactly to a straight line, so there is often differences between what the model (straight line) thinks is the right answer, and what the right answer really is. One very popular way to pick the best line is to find the **residuals**, the distance between the actual data and the value predicted by the line. It makes sense that the line with the lowest residual, meaning the least wrong answers, is the best line.
+
+How do you calculate residuals? Math! (please don’t runaway the math is cool I promise)
+
+Remember this equation for grade school for describing straight lines?
+
+$$
+Y = mx + b
+$$
+
+Where:
+- $$m$$ is the slope of the line
+- $$b$$ is the y-intercept
+
+Well you imagine that equation being written with two variables, named $$B_0$$ and $$B_1$$:
+
+$$
+Y = B_1x + B_0
+$$
+
+And if you tweak $$B_1$$ and $$B_0$$ to the right numbers, you can reach the best fit line. ALSO: Using this formula, we can find residuals with:
+
+$$
+e_i = y_i – \hat{y}_i
+$$
+
+$$e_i$$ stands for error for point i—-it’s the distance between the predicted value ($$\hat{y}$$) and the actual value $$y$$. With can sum up all the residuals at every point, called the **Residual Sum of Squares (RSS**), and compare this sum across lines to find the best line:
+
+$$
+RSS = \sum_{i=1}^n (y-y_i)^2
+$$
+
+<center>or if we plug in our line formula from above:</center>
+
+$$
+RSS = \sum_{i=1}^n (B_0+B_1x-y_i)^2
+$$
+
+\*we square the values so it doesn’t matter if the difference is positive or negative AND so that the residuals are more pronounced
+
+We want to minimize RSS to find the best fitting line. The minimum is also where the derivative is closest to 0. If you need to understand the relationship between minimum and derivatives check out this. So we take the partial derivative of RSS with respect to each variable, and pick the variable values in this way.
+
+This is how we can go quickly go through all possible values of B0 and B1 and pick the best line! The process of going through all these values is what Machine Learning is.
+
+### Q: Is there actually a relationship, or is it just noise?
+
+Even if we pick the best line, how do we even know that line explains anything? There are a few ways…
+
+1. We can estimate the variance, or how spread out the data is from our line, with **Residual Standard Error (RSE)**, defined as:
+
+$$
+RSE = \sqrt{\frac{RSS}{n-2}}
+$$
+
+Where:
+ - $$n$$ is the number of data points
+ - 2 comes from us having 2 variables, $$B_0$$ and $$B_1$$
+
+
+The smaller the value, the closer the data points are to our line, which means the more likely our line is describing a relationship.
+
+2. We can use **$$R^2$$ Statistic**, which represents the percentage of variability explains by our model. The closer to 1, the better.
+
+$$
+R^2 = 1 – \frac{RSS}{TSS}
+$$
+
+**Total Sum Squares (TSS)** is the same formula as RSS, but instead of subtracting each point from our predicted value, we subtract it from the mean of all points:
+
+$$
+TSS = \sum_{i=1}^n (y_i - \hat{y})^2
+$$
+
+### Adding More Variables
+Normally, it’s hard to find an answer using only one independent variable. Even though there is a strong linear relationship between square footage and price, it is probably not the only factor. How do we analyze many different independent variables?
+
+We’ve recently shown how to fit a line using two variables, one independent and dependent. This modelling method is called **Simple Linear Regression**. But we can easily add more independent variables, called **Multiple Linear Regression (MLR)**. All we have to do is change our original equation:
+
+$$
+Y = B_0 + B_1x
+$$
+
+<center>To something like this:</center>
+
+$$
+Y = B_0 + B_1x + B_2x + …
+$$
+
+And we can use the same methods as above!
+
+Adding variables tends to artificially inflate our R2 value, so we should use an adjusted R2 statistic for multiple linear regression:
+
+$$
+R^2_{adj} = 1 - [\frac{(1-R^2)(n-1)}{n - p - 1}]
+$$
+
+Where:
+- p = # of variables in model
+- n = # of data points
+
+and we similarly modify the RSE formula:
+
+$$
+RSE = \sqrt{\frac{RSS}{n – p - 1}}
+$$
+
+### Bigger is not always better
+
+Adding more variables allows you to answer more exciting problems, and get more sophisticated answers. For instance, simple linear regression can answer the question “How does house square-footage change the initial asking price?” but multiple linear regression can answer the question “How does square-footage, miles from beach, number of nearby dog parks, and length of previous owner’s stay effect price?” Multiple Linear Regression problems will oftentimes be able to provide better insight into the problem you are asking.
+
+There are a few things to keep in mind when adding more and more variables… “too much of a good thing” is certainly true when discussing Machine Learning.
+
+**Multicollinearity** is the idea that two or more predictor variables are highly correlated with each other, meaning that changes one changes the other quite drastically. This is bad because it affects our ability to predict/determine which individual predictors are actually important. Multicollinearity is pretty hard to find, but there are ways. The easiest method is to add/remove one and see if there is a large change in your regression coefficients (your B1s and B2s)
+
+The final piece of advice for Machine Learning that extends beyond linear regression is this:
+
+**Occham’s Razor**: Keep it Simple; If two models perform equally as well, the simpler one is the better model.
+
+Simple models are easier to build and understand than complicated models. While it is tempting to try and use Deep Learning or another cutting edge, super complicated method, oftentimes a simple model will do the trick, and actually be more powerful in terms of explain-ability (a HUGE problem in Machine Learning currently). Only move on to more complicated models when you can’t use a simpler one, which is a rarer than you might think…
+
+<u>Next steps</u>: How do help this learning process along, and (try to) make sure the Machine Learning algorithm learns the right thing?
+
+NOTE: Because our variables (B1,B2,B3…)are tied to an x value, they are often referred to as coefficients or coefficient estimates. I will be using this vocab in later posts
+
+### Recap
+1. The best fit line is the one with least amount of residual
+2.	Linear regression is fitting a straight line to data
+3.	The simpler the model, the better
