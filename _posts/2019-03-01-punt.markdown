@@ -7,6 +7,10 @@ categories:
 excerpt:  "Using data to prevent professional concussions"
 background-image: data_blog_imgs/football.jpg
 ---
+
+## A Football Story
+
+
 Over the holidays the National Football League (NFL) partnered with Kaggle and launched a contest to propose a data-driven rule change that would reduce concussions on punt plays without "negatively impacting the integrity of the game." Take a look at my proposal below:
 
 <style>
@@ -18,9 +22,7 @@ Over the holidays the National Football League (NFL) partnered with Kaggle and l
 <!-- Google embed ends -->
 </div>
 
-
-
-## A Football Story
+# .
 
 Making an incredibly violent sport "safer" is almost an oxymoron. Part of the appeal of football is also the horror of football. As fans like to say, it's a "warrior sport." I think that roughly translates to, "you're going to get hurt. Get over it."
 
@@ -60,4 +62,10 @@ One element of the concussion problem that the NFL faces today is that the most 
 
 Anyways --
 
-In conclusion, I hope you read and enjoy my above proposal. It was hard work, but I thoroughly enjoyed making it. <a href="https://www.kaggle.com/adam1brownell/punt-concussions"> You can find my source code public on my Kaggle</a>
+In conclusion, I hope you read and enjoy my above proposal. It was hard work, but I thoroughly enjoyed making it.
+
+<a href="https://www.kaggle.com/adam1brownell/punt-concussions"> You can find my public source code on my Kaggle</a> or
+
+[download the above presentation as a PDF](..\assets\punts.pdf).
+
+Enjoy !
