@@ -17,3 +17,47 @@ Over the holidays the National Football League (NFL) partnered with Kaggle and l
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQuf-uPrQ-V0w75MNUAS8ktiZwg9yGcLpbW0FaBUSZeHhVyOm3aL8qMWGWcsUkfw0CQseTOD_mTt9kY/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="749" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <!-- Google embed ends -->
 </div>
+
+
+
+## A Football Story
+
+Making an incredibly violent sport "safer" is almost an oxymoron. Part of the appeal of football is also the horror of football. As fans like to say, it's a "warrior sport." I think that roughly translates to, "you're going to get hurt. Get over it."
+
+I was told a good explanation for the nature of American football versus other sports: Many sports are **contact sports**; you can expect to make contact with others players throughout the game. Basketball is a contact sport-- you have to post up. Golf is a non-contact sport-- you never even have to see your opponents. Soccer? Contact. Volleyball? Non-contact. You get the idea.
+
+Football is not a contact sport. Football is a **collision sport**; you _have_ to make contact with other team to play. Rugby is a collision sport. So is boxing. The most violent sports are the ones that _must_ hit the other players, and are oft rewarded for doing so.
+
+With this framework in mind, I assumed the bigger the collision, the higher the chance of concussion.
+
+As a fan, it seemed obvious to me that the cause of concussions was big hits. Whenever I watched a game or highlight, the guys being carted off were _always_ the player on the receiving end of a vicious hit. And maybe sometimes on the giving end if they led with their head... and why would you do that?! Even in Pop Warner Pee Wee Football for Babies league that I was in when I was a kid I was taught not to lead with my head. And when I didn't learn from someone explaining it, I learned from when I _tried_ to lead with my head and rang my own bell.
+
+So when the NFL announced the contest to see how they could reduce concussions, I figured I (and every other mildly attentive fan) already knew the answer. Instead, I would spend most of my time answering the actual question of, "how do we reduce big hits in football that cause concussions?"
+
+But this was wrong.
+
+When it came to punt plays (the only plays I was given data for) only about **half of all concussions involved tackling or being tackled.** That means that **half of all major concussions happened off-ball during blocking**
+
+That is an astounding statistic. In a collision sport, half of the most debilitating and serious injuries happen on non-essential collisions. In other words, half of all concussions on punts are _avoidable_.
+
+Even more surprising: **Almost 3 quarters of all concussions happened to the punt team**
+
+This means that punt returner-- the player who catches the ball and has 11 300lb men chasing him at full speed -- was _less likely_ to get a concussion than the linemen jogging down no where near the ball.
+
+That's amazing!
+
+That's why I was so engrossed in this project. The data revealed that the big Hollywood hits that were so praised & vilified in equal parts were not the entire problem. A huge contributor to brain injuries were these off-ball arguably irrelevant hits.
+
+To combat this problem, I was able to consider how to reduce situations that resulted in off-ball collisions, rather than how to reduce the collisions themselves.
+
+Part of the data provided for this dataset was velocity data of players on punt plays. While this was incredibly detailed and exciting data to work with, it didn't seem relevant to me. So what if I figured out how fast a player was running on a particular play? You can't imposed speed limits on players, and trying to hamstring players for reaching high speeds will inevitably hurt gameplay.
+
+That was another interesting part of this project-- finding a solution that reduced concussions without reducing "game integrity." What does that even mean? At some point in the history of football, helmets and pads and refs and goal posts were added-- did those effect game integrity? Or are concussions not a strong enough incentive to change the game of football? From a Data Science perspective, it was a cool constraint to work with. As someone who dislikes brain injuries (you can quote me on that) it seemed like an odd request by the NFL.
+
+(I also have a sneaking suspicion that I did not win the contest because I did not include the velocity data, as all the winners did so. But a good Data Scientist doesn't _need_ to use all the data if they don't have too... @NFL please reconsider your decision I'll still accept SuperBowl tickets)
+
+One element of the concussion problem that the NFL faces today is that the most destructive brain injuries don't occur on single plays-- they occur over a lifetime of football. CTE is the hot buzzword nowadays, and a data project about brain injuries in the NFL that does not involve CTE information seems like a deliberate avoidance of the topic.
+
+Anyways --
+
+In conclusion, I hope you read and enjoy my above proposal. It was hard work, but I thoroughly enjoyed making it. <a href="https://www.kaggle.com/adam1brownell/punt-concussions"> You can find my source code public on my Kaggle</a>
