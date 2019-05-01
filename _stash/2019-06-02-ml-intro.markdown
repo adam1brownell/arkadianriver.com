@@ -3,7 +3,7 @@ layout: post
 mathjax: true
 title: "Intro to Machine Learning I"
 excerpt: "What is Machine Learning?"
-date: 2019-03-02
+date: 2019-06-02
 categories:
   - edu_bank
 background-image: edu_imgs/ml.png

@@ -1,0 +1,60 @@
+---
+layout: post
+mathjax: true
+title: "Intro to Machine Learning VI"
+excerpt: "Is Bigger always Better?"
+date: 2019-03-02
+categories:
+  - edu_bank
+background-image: edu_imgs/ml.png
+---
+
+## <u>Dimensionality Reduction</u>: Lifting a Machine Learning Curse
+
+Imagine you’re buying a car. What information do you need before you make a decision?
+
+You probably need to know the make, model, price, and what features it has. Maybe where you can buy it, or comparable models and prices. Clearly, more information will help you make a more informed decision.
+
+But is there such thing as TOO much information? Having so much information that it actually makes the decision making process harder?
+
+The answer is actually yes.
+
+Choosing between 2 cars is easy. Choosing from hundreds of varieties-- brands, years, new/used, domestic/foreign, color-- is harder. In psychology, the addition of so many options that it becomes harder to make a decision is called **Choice Paralysis** or **Overchoice**. Despite having more options, and more information, the decision actually becomes harder. Everyone has experienced this before, whether it  be buying a car or buying chips at the grocery stores, having more options sometimes makes it a more daunting purchase.
+
+The same goes for Machine Learning. We may assume that our model wants as much information (features) as possible, to be as sophisticated as possible. But does our model really need ALL information? Does it really need to know how well the car company is doing? How old the CEO of the company is? What the name of the car salesman is? No, it doesn’t. In Machine Learning, this overload of information is called **The Curse of Dimensionality**: Adding more and more features requires more and more data to compensate, or else the data becomes too sparse to draw any meaningful (statistically significant) findings from.
+
+A good visual for understanding The Curse of Dimensionality starts with a 2-D plot of data. Obviously, this data is plotted along two features, x and y:
+
+    <2d plot>
+If we add a third dimension, z, we can have a 3-D plot along all three dimensions:
+
+    <3d plot>
+
+Following this logic, we can imagine adding as many features as we want, and our data points spreading out over that many dimensions in some sort of multi-dimensional plot. BUT, as you can see from just changing from 2D to 3D, adding another dimension spread our data out. Adding more and more features, and therefore dimensions, without adding anymore data will cause our multi-dimensional graph to become incredibly spread out. With such sparse datapoints, our model can’t find patterns that it would be able to notice in a lower-dimensional feature-space. We can add more data to fill in these gaps, but with each new feature/dimension, we have to add more and more data, which oftentimes we do not have or can be very costly to collect.
+
+Another answer to the Curse of Dimensionality is **Dimensionality Reduction**, where we reduce the number of features we feed to our models in order to improve accuracy. An obvious, and more subjective, form of dimensionality reduction is **Feature Selection**: to hand pick the features to feed your model that you know are important. In our car buying analogy, you would keep price and model, but not the age of CEO. But this solution breaks down when you have hundreds or thousands of features to comb through; and is pretty much impossible unless you have a huge amount of knowledge about the problem already (at which point, you have to ask why you are building a ML model in the first place….)
+
+### PCA
+
+A more programmatic and effective way to reduce the number of feature is to use **Principal Component Analysis (PCA)**: The process of finding a combination of variables that explain the maximal amount of data variance. A **Principal Component** is a combination of features that explains a certain amount of variance; the 1st principal component output by PCA explains the most variance, followed by the 2nd and then 3rd, etc. In this way, we can reduce a data set with hundreds of features to just a few principal components!
+
+Prepping your data for PCA is vital to get good principal components. The PCA Algorithm assumes your data is centered around 0 or has had the overall mean subtracted from it:
+
+    <zero-centered data transform>
+
+And that your data is **normalized**, meaning that the variance is evenly scaled across all features. This is important PCA is sensitive to the shape of your data— A difference between 5 and 50 on a hundred point scale is a more significant change than 50 to 500 on a 10,000 point scale, even if the absolute amount is more. Normalizing, typically so values on a feature are between 0 and 1, would help PCA see this.
+
+You can decide how many Principal Components to use by looking at a **Scree Plot**, which plots the number of principal components against the variance explained:
+
+    <Scree Plot>
+
+We typically choose the “elbow” of the screen plot—where adding an additional principal component doesn’t add too much more variance explanation.
+
+PCA is great because it is an unsupervised technique that reduces dimensionality and doesn’t rest on any big assumptions. However the downsides are that interpretability of principal component data is often very low.
+
+And the math to understand how to calculate PCA by hand is quite involved and beyond the scope of this post—<here> is a explanation of the linear algebra behind PCA.
+
+### Recap
+
+1.	More features isn’t always better, we want to focus on picking the fewest features that provide the most value to our model
+2.	PCA helps reduce the number of features by combining several features

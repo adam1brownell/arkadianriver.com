@@ -1,0 +1,137 @@
+---
+layout: post
+mathjax: true
+title: "Intro to Machine Learning VII"
+excerpt: "What are  Common Machine Learning Models?"
+date: 2019-03-02
+categories:
+  - edu_bank
+background-image: edu_imgs/ml.png
+---
+
+## <u>Model Mash</u>: Some common ML models
+
+As you’ve probably picked up from the past few posts, your choice in model greatly effects your ability to understand/answer your problem. We've introduced and talked about linear and logistic regression, but what about others? Each model has its own set of pros and cons, and in this post, we are going to go over a few common models that machine learning engineers use often.
+
+### K-Nearest Neighbors (k-NN)
+
+**k-NN** examines the closest samples to determine a classification. Put more concretely, if we already have 10 data points, when we get an additional data point, we compare this point to all 10 and see which data point is the closest/most similar.
+
+Typically we choose a value of k so that we compare our new data point to more than one neighbor, and we choose an odd number of k so we are less likely to get a tie. Small values for k tend to have high variance, as the model is too sensitive. Large values of k tend to underfit the data as the model is often wrong.
+
+The idea of which data point is “near” is also an interesting concept. If we just imagine a 2 variable (2-D) feature space, and we add an additional point, which points are closest?
+
+      <Plot with 10 red dots and one blue dot>
+
+We can use **Euclidean Distance**, which is what we typically think of when considering distances:
+
+      <Euclidean distance>
+
+We can also use **Manhattan Distance**, which is similar to walking a grid:
+
+      <Manhattan Distance>
+
+We can even use **Mahalanobis Distance**, which checks how many standard deviations away the sample is
+
+And there many other distance metrics we can use!
+
+| Pros | Cons |
+|-----+------|
+| No training time required—the model is considered “lazy” because the only computation required is for classifying new points | Computationally expensive/slow to classify—we have to calculate the distance between the new sample and every previous point |
+|  Model is intuitive and easy to understand | Choosing k has a large influence over results |
+| No complex tuning required | You need a very large dataset with respect to features to get accurate results |
+| Provides good classification when number of samples is high | You can’t use categorical variable without some feature engineering, because distances between categories doesn’t really make sense |
+|-------+-------------------|
+
+
+### Naïve Bayes Classifier
+**Naïve Bayes** uses **Bayes Rule** as a tool for classification:
+
+$$
+P(A│B)=\frac{P(B│A)P(A)}{P(B)}
+$$
+
+Bayes Rule is a famous statistics formula that essentially it the key to figure out **conditional probability**, or the probability that $$A$$ will occur given B has occurred, written as $$P(A\|B)$$. Bayes Rules demonstrates that if you the conditional probability of $$P(B\|A)$$ and the priors—or the likelihood of an event occurring in the first place—for $$A$$ and $$B$$ ($$P(A)$$ and $$P(B)$$ respectively) you can find out how likely an event is to occur.
+
+So for machine learning, we use our dataset to inform (train) our priors and conditional probabilities and output the likelihood for a certain event occurring. An example problem is given we receive an email, how likely is it to be a spam email. We inform our classifier on the likelihood of receiving a spam email (A) and the likelihood of receiving an email with certain feature (B). Through this process, we can build a naïve bayes spam filter!
+
+
+| Pros | Cons |
+|----+----|
+|	More resilient to Curse of Dimensionality than most other models|Assumes independence of variables, which is quite often not the case|
+|Easy to implement||
+|Does not assume anything about the data distribution||
+|---+---|
+
+
+### Tree Models
+
+Tree-based models segment the feature space into various rectangular regions. These disected regions our of predictor space denote distinct “decisions” the model has made about the data. A new data point that falls in region A would be labelled one class, region B a different class, etc. If the problem was regression rather than classification, a new data point would be labelled the average value of all other data points that fell within the same region.
+
+A more intuitive visual for tree models is that of a **Decision Tree** (hence the name) with branches. Each splitting **branch** represents a “decision” the tree model has made about the data—essentially drawing a line in the feature space. After many branches off branches off branches, the tree would be complete, and new data point would be shuffled along these branches until it reached the **leaf node** (also called a **node**), or end of the tree, where it would be given an appropriate label.
+
+For example: suppose we were trying to predict house price from only one variable—number of bedrooms. The tree model could learn that nearly all houses in our data set worth more than $1million have at least 4 bedrooms. Knowing this, it would then to split at this spot into two branches, wherein one branch would be chosen if ever a new data point had more than 4 bedrooms, and the other if it did not. The model would continue to make these sorts of branch splits (and refine the ones it already has) until it creates the best version of itself.
+
+For regression problems, we can use RSS as our loss function to improve our tree, where y is the value predicted by the region of feature space (or leaf node value) the data point procures.
+
+For classification problems, we typically use a new loss function called **Gini Index**:
+
+$$
+G_m = \sum_{k=1}^k \hat{p}_{mk}(1-\hat{p}_{mk})
+$$
+
+Where:
+- $$K$$ is the number of classes
+- $$\hat{p}_{mk}$$ is the proportion of training observations of class K in node/region M
+
+Essentially, this loss function measures ‘node purity,’ and rewards the tree for creating branches with fewer classes in the nodes (that is still accurate).
+
+An additional loss function we can use is **Cross-Entropy** which arises from Information Theory:
+
+$$
+D_m = -\sum_{k=1}^k \hat{p}_{mk}log(\hat{p}_{mk})
+$$
+
+Which uses similar values and strategies as Gini Index.
+
+It seems that the more branches a tree adds, the more accurate it can be. However, this can easily lead to overfitting, as the tree can simply add hyper-specific branches to artificially inflate training accuracy. To combat this, we can use **Tree Pruning**, which is the act of removing branches from a large decision tree that add very little power to our tree on their own. This can be added to our loss function as a form of regularization, where we punish the model for adding an additional branch if the responding loss reduction is not high enough.
+
+|Pros|Cons|
+|---+---|
+|Simple to explain, understand, and interpret|	Often has low predictive power due to high variance of data|
+|Handles qualitative predictors | Computationally expensive to try ever iteration|
+|Works well for non-linear relationships||
+
+To address the downsides of Decision Trees, we can us bagging. **Bagging** is the act of creating several smaller trees trained on bootstraps (subsets of the training data) and using the predictions of each of these “mini-trees” to generate more accurate answers. For regression, bagged decisions trees average the predicted values of each mini-tree. For classification, bagged trees take a majority vote. **Boosting** is related to bagging, but each new mini-tree is informed by which splits were successful for prior mini-trees, rather than starting from scratch each time. **Random Forests** are a class of ML model that utilize bagging and boosting.
+
+The advantages of Random Forest models are that we can reduce the variance and complexity of simple decisions trees, as well as increase overall accuracy.
+
+The disadvantages are that we lose the interpretability of decisions trees. We no longer know why a data point was given a certain label as we did with decision trees.
+
+### Support Vector Machines (SVMs)
+If Decision Trees were easy to understand with low predictive power, SVMs are the exact opposite. SVMs classify data by separating it linearly after projecting it into a high dimensional space. Two understand why this works, we need a quick introduction to a math concept and a math conjecture.
+
+<u>Math Concept</u>: In 2D space, we can separate data linearly with a straight line. A straight line is a 1D object separating 2D data. Similarly in higher dimensions, we can separate data linearly with a **Hyperplane**, a N dimensional subspace that can separate data in N+1 dimensions. In 2D space, the best fit line is the line that separate the two classes most distinctly—meaning it is clear which class is on either side of the line. Similarly, the hyperplane with the widest gap between itself and the training data is the best fit hyperplane.
+
+<u>Math Conjecture</u>: Given any data set, there exists a hyperplane at dimension N that can cleanly divide the data linearly into two groups.
+
+To find the hyperplane with the widest gap we can use a **Maximal Margin Classifier** (margin is another name for gap), which calculates the distance between of data points closest to the hyerplane, given that the hyperplane distinctly groups the classes appropriately. The data points used to find this distance are called **Support Vectors**.
+
+This is great, but:
+1. Maximal Margin Classifiers only rely on a few support vectors… which is a problem for noisy data
+2. Some dataset are simply not linearly separable
+
+Enter the **Support Vector Machine**: A Maximal Margin Classifier that has flexibility in terms of misclassification. It essentially gives weight to misclassified data points in addition to the distance to support vectors, allowing us to find the hyperplane with the largest distance as well as lowest misclassifications.
+
+Hooray!
+
+And it turns out that we only need to compute the inner product of the features in higher dimensions, rather than the actual features. We can use **Kernels**, which are generalizations of high dimension products that replace feature products.
+
+|Pros|Cons|
+|Powerful|Confusing|
+
+### Recap
+1. KNN models use the distance to other data points to predict values
+2. Naïve Bayes models use conditional probability to determine which predicted value is most likely
+3. Tree models use branches to determine which value to assign a data point
+4. SVMs classify data by separating it linearly with a hyperplane after projecting it into a high dimensional space
