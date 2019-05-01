@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience X"
 excerpt: "How does our Brain make us Move?"
-date: 2019-05-02
+date: 2019-05-14
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

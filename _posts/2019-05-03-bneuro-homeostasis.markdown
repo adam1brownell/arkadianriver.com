@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience XI"
 excerpt: "How we Control our Body Temperature?"
-date: 2019-05-03
+date: 2019-05-21
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

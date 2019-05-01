@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience XII"
 excerpt: "Why do we Sleep?"
-date: 2019-05-04
+date: 2019-05-28
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

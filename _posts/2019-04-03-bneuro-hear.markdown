@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience VII"
 excerpt: "How do we Hear? Or Balance?"
-date: 2019-04-03
+date: 2019-04-16
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

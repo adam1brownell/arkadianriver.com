@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience XIII"
 excerpt: "How do we Remember?"
-date: 2019-06-01
+date: 2019-06-04
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

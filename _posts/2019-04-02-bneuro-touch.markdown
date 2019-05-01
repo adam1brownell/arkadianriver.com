@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience VI"
 excerpt: "How does our Brain process Physical Sensations?"
-date: 2019-04-02
+date: 2019-04-09
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience II"
 excerpt: "How does our Brain grow?"
-date: 2019-03-09
+date: 2019-03-12
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

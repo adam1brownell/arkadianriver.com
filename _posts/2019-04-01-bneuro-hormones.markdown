@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience V"
 excerpt: "How does our Brain communicate with the body?"
-date: 2019-04-01
+date: 2019-04-02
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

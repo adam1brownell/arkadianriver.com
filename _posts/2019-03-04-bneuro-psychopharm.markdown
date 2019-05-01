@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience IV"
 excerpt: "How do Drugs affect our Brain?"
-date: 2019-03-11
+date: 2019-03-25
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

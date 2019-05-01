@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience IX"
 excerpt: "How do we See Things?"
-date: 2019-05-01
+date: 2019-05-07
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

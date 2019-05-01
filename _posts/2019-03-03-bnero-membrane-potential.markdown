@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience III"
 excerpt: "How do Neurons Work?"
-date: 2019-03-10
+date: 2019-03-18
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

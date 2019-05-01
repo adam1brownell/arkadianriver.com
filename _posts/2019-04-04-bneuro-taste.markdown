@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience VIII"
 excerpt: "How do we Taste? Or Smell?"
-date: 2019-04-04
+date: 2019-04-23
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg

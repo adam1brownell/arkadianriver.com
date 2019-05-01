@@ -2,7 +2,7 @@
 layout: post
 title: "Behavioral Neuroscience I"
 excerpt: "What is the Brain made of?"
-date: 2019-03-01
+date: 2019-03-05
 categories:
   - edu_bank
 background-image: edu_imgs/neuron.jpg
