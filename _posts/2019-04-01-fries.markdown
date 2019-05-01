@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Starch Madness"
+date: 2019-04-20
+categories:
+  - data_blog
+excerpt:  "Who serves the best french fry?"
+background-image: data_blog_imgs/french-fries.jpg
+---
+
+## French Fries for Data Science
+
+I wrote a research paper about french fries. It was delicious.
+
+You can see my company post about it <a href="https://retina.ai/blog/data-science-for-french-fries/">here</a>. **ArXiv** rejected it for not being "referenceeable". Not a real word, and not a real reason...
+
+<object data="..\assets\starch_madness.pdf" width="1000" height="1000" type='application/pdf'/>
