@@ -2,7 +2,7 @@
 layout: post
 mathjax: true
 title: "Intro to Machine Learning VII"
-excerpt: "What are  Common Machine Learning Models?"
+excerpt: "What are Common Machine Learning Models?"
 date: 2019-03-02
 categories:
   - edu_bank

@@ -32,7 +32,7 @@ lang: en-us # used in HTML lang attributes
 #  text: _Your detailed greeting text_
 # - displayed at the bottom
 closing-head: Thanks for visiting!
-closing-para: Have some feedback? Drop me a line
+closing-para: Have some feedback? Drop me a line below
 # on all pages (and the first three you list display with greeting, if included)
 social:
   #twitter:

@@ -10,7 +10,7 @@ background-image: data_blog_imgs/french-fries.jpg
 
 ## French Fries for Data Science
 
-I wrote a research paper about french fries. It was delicious.
+I wrote a research paper about french fries. It was delicious. [download it here.](..\assets\starch_madness.pdf).
 
 You can see my company post about it <a href="https://retina.ai/blog/data-science-for-french-fries/">here</a>. **ArXiv** rejected it for not being "referenceeable". Not a real word, and not a real reason...
 

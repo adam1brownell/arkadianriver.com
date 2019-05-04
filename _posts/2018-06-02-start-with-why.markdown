@@ -4,7 +4,7 @@ title: "Start with Why"
 date: 2019-03-01
 categories:
   - data_blog
-excerpt: why I started this blog
+excerpt: Why?
 background-image: data_blog_imgs/startwhy.jpg
 ---
 

@@ -1,0 +1,138 @@
+---
+layout: post
+mathjax: true
+title: "Intro to Machine Learning VII"
+excerpt: "What are Neural Networks?"
+date: 2019-03-02
+categories:
+  - edu_bank
+background-image: edu_imgs/ml.png
+---
+
+## <u>Neural Networks</u>: Statistics meets Neuroscience (kinda)
+
+**Disclaimer**: This post is _heavily_ inspired by Andrej Karpathy’s blog posts on Neural Nets and the famous Stanford CS231 course. Links to both [here](http://karpathy.github.io/) and [here](http://cs231n.stanford.edu/). The reason I am essentially rewriting these great resources is (1) for my own edification and (2) because of the following quote:
+
+> “Everything became much clearer when I started writing code” -Computer Science PhD student Andrej Karpathy
+
+This topic seems complicated, but a fair amount of the complications comes from the fact that often explanations are not made in language we are comfortable. For CS PhD student Andrej, the papers were hard to follow, but the code made it digestible. For me, breaking these esoteric concepts down into simple sentences makes them more engageable, and helps me better understand and explain them to others. I hope others feel the same way.
+
+### Neurons and Logic Gates
+
+      <and/or gate photo>
+
+A good analogy for neural nets can be logic gates. This may not seem like a common idea but it's really quite simple:
+
+Two inputs come into the gate, A and B. For an $$AND$$ gate to turn on, both A _and_ B need to be on. For an $$OR$$ gate to turn on, either A _or_ B need to be on. Simple right?
+
+
+Neural nets use a similar logic, except instead of AND or OR gates, neural nets use $$\cdot$$, $$+$$ or $$exp()$$, since the inputs aren’t ON or OFF, but numbers. For an $$\cdot$$ Gate (Gates are called **Units** for Neural Nets): If A is 2 and B is -3, the unit outputs -6.
+
+Say we want to increase the output of our gate, how would we do that?
+
+We could randomly change A and B and pick the values that maximize the output (**Random Local Search**) but this won’t scale to millions of gates well.
+
+A second, more usable, approach involved wiggling one input, seeing if this wiggle increases the output, and “pulling” the input in that direction if it does (**Numerical Descent**). This force “pulling” the input as the output increase is the **derivative**. So we wiggle our inputs $$x$$ and $$y$$, written $$f(x,y)$$ by a tiny amount h to become $$f(x + h, y)$$, and influence/change the input by a tiny amount if it increase our output or not. The derivative, written $$\frac{df(x, y)}{d(x)}$$ when we are wiggling $$x$$, can be calculated by
+
+$$
+\frac{df(x,y)}{d(x)}=\frac{f(x+h, y) + f(x, y)}{h}
+$$
+
+Can’t completely get rid of math-- but giving context to these scary equations helps us understand the language better!
+
+Taking the derivative in respect to all inputs is called a **gradient**. Like climbing a hill blindfolded, we take tiny steps and feel around to see if that step moved us up the mountain or down. h is typically set to something like $$0.00001$$. Having a larger input (or taking larger steps) is risky because we could fall off the side of a large cliff we didn’t was there. These tiny steps may be safe, but it is pretty expensive, since we still need to calculate the derivative for each input.
+
+BUT, using ~calculus~ we actually figure out the derivative of x is y! This is true at every date regardless of complexity, and we call this quick calculation of the derivatives the **Analytic Gradient**.
+
+### Changing our Inputs & Backpropagation
+
+Once we have each circuits gradient, we can use the **Chain Rule** to calculate tugs to make to our inputs. All we need to do is “chain” relevant circuit gates together! Basically, by using the Chain Rule to link up circuits, we can know which direction to move inputs.
+
+If we attach a second to our original circuit:
+
+    <Two gates>
+    X---\
+          |------\           <- * gate
+    Y---/         \
+                    |----------- output
+    Z-----------/                         <- + gate
+
+And push our inputs down using analytic descent, finding out our output increases, we can pass the information _back down_ the gates through backpropagation. Backpropagation is an amazing math tool that powers neural networks, and by extensions most of the new technologies emerging, and essentially can be boiled down to the following logic:
+
+1.	We change our inputs, and find a new output
+
+        (-)X---\
+              |------\
+        (-)Y---/         \
+                        |----------- output
+        (+)Z-----------/
+
+2.	If these changes moved our output in the correct way (in our case, increasing the output) we “reward” our new inputs by tugging them in this direction again.
+3.	We tug on the Gate 2 first, since it is closest to the output. This pushes Z up more, and Gate 1’s output up more.
+4.	We tug on Gate 1 next… to increase the output of Gate 1 we actually have to decrease the values of X and Y, so we tug them in this way
+5.	We run these new inputs back through our gates, and see if the output moved in the correct direction again…
+Like the derivative formula, where the tug is based on how big h is, the amount of “force” passed down through back propagation is based on how much of an impact that gate had on the output-- ie how much the input change influenced the output. The beauty of backpropagation is that this is an entirely local process, meaning that it does the same thing regardless if we are dealing with 2 gates and 3 inputs or millions of gates and hundreds of millions of inputs!
+From within gates…
+
+- $$ADD$$ gates distribute the gradient equally to all inputs
+- $$MULTIPLY$$ gates distribute the gradient in inverse proportions to the inputs; meaning the smaller the input the larger the tug
+- MAX gates distribute the gradient only to the max value
+
+### Setting Up the Architecture & Getting Started
+
+Neural Nets were originally built and inspired to model biological neural systems, but now has become a matter of engineering and achieving good results in Machine Learning tasks. Many people don’t like comparing Neural Networks to brains, and prefer to call ML neurons units instead. Nevertheless, it is a worthwhile exercise to compare biological neurons with Machine Learning units.
+
+Each unit in a neural network has its own **activation function**, which tells it when to “fire,” or what value to send to the neighboring units. In neurons, they all or none signals, meaning they either completely fire or do not (0 or 1 output). This can be mathematically explained with a Sigmoid Function, which normalizes inputs to between 0 and 1 and mostly outputs values very near 1 or 0. This, while biological, tends to cause problems for machine learning models since it makes it hard for the neural net to learn how close/far off the input was. Because of this, units have a toolkit of more sophisticated communication style, and can use different activation functions:
+
+- **Tanh**: Normalizes the input between -1 and 1. Essentially a zero-centered sigmoid function, allowing negative values is beneficial to the model
+- **ReLU (Rectified Linear Unit)**, outputs the larger of two numbers: the input x or 0. Written max(0,x). This, while being simpler to Tanh or Sigmoid, is quite helpful and helps Gradient Descent speed up much faster. However it does lead to units “dying”-- having the input be set so low that the unit will never output anything other than 0-- which occurs when the learning rate is too high.
+- **Leaky ReLU**, which solves this by giving ReLU units a slightly negative slope so that they can correct their weights
+
+Neural Nets are an acyclic graph (you can’t loop back to a unit you started at) organizard into connect layers in which units  in the same layer are not connected. An “N-layer Neural Net” does not include the input layer, and the output layer does not have an activation function.
+
+      <3 unit input, 4 unit hidden, 2 unit output>
+
+- Has 6 units (4 + 2)
+- Has 20 weights (3x4 + 4x2)
+- Has 6 bias values (4+2)
+- Has a total of 26 parameters (weights + bias)
+
+**Deep Learning**, a very popular buzzword nowadays, has 10 - 20 hidden layers with upwards of 100 million + parameters. Despite the added complexity, neural nets and deep learning still suffer from overfitting and need regularization and other precautions to ensure safe training.
+
+### Loss Functions & Regularization
+Let’s take a step back from Neural Nets to understand loss and regularization on a simpler example.
+
+Imagine we are trying train a model to classify different images. To a computer, an image has 3 dimensions: height, width, and color channels (typically 3 for RGB). Let’s assume we have a dataset of images of size 50pixels by 20pixels by 3 color channels (50x20x3). To teach our model what an image is, and what the image of, we will use a **Score Function**, which scores new input classes, and a Loss Function, which quantifies the difference between the score and the ground truth. **Loss Function** is often called **Cost Function**. As a previous post mentioned in linear regression, a common score function is $$y = xb_1 + b_0$$ and a common loss function is MSE. If we flatten our image from (50x20x3) to (3000x1), we can build a weight for each input! Our score function now has $$3000$$ weights for each of our inputs, and our goal is to tune those weights so that the model outputs an answer as close to the ground truth as possible. For sake of this example, imagine our weights are in a 2D matrix with k rows and l columns.
+
+So far, our loss function works fine, but one of the quicks of having all of these weights is that having one extremely large weight can overwhelm our score/loss, and we so want to keep our weights as small as possible for as long as possible. We can do this by adding a regularization term to our loss function.
+
+Which we discussed in a previous post. Hooray!
+
+As we set up our neural network, we still need to initialize our weights to some value for the first round. We shouldn’t initialize them to the exact same number since backprop would have no idea which way to pull the outputs since they are all the same; especially bad if we initialize everything to 0 since nothing would fire. We typically want small, random, unique numbers centered around 0-- common practice is to divide this random number by the number of inputs, or take advantage of transfer learning.
+
+### Learning and Evaluation
+
+The process of finding the set of weights that minimize the loss function is called **optimization**. Optimization is the formal math name for the process we already talked about where we took tiny steps to make our gate’s output closer to the truth. Since we are minimizing the loss, we often visualize optimization as taking small steps towards the lowest point in the “loss canyon.” Here is an actual visual of a loss function-- you can see that there is a definite lowest point, and so our optimization strategy should ideally help our model move towards this lowest point.
+
+Optimization is another word for **learning** for neural networks, because as we optimize our loss function, the model is learning what a correct answer should look like. Optimization is critical to our model’s success, but take a long time. Choosing a method that can do this quickly and intelligently is important.
+
+The logic gate updating strategy of moving in the opposite direction of the gradient is the classic optimization process. Another is **momentum update**, where we treat the loss like a hill, and as the steepness increases we move faster towards that downward direction; instead of updating based on gradient, we update based on our unit’s “velocity” in respect to the gradient. **Simulated Annealing** is another strategy is that our learning rate decreases (or cools) as our training progresses, allowing large jumps at the beginning and progressively smaller jumps towards the end. The thought process here is that our model could get stuck in a **local minima**-- a valley in our loss function that isn’t actually the lowest point-- and the larger jumps at the beginning allow our model to escape these points.
+
+While training/learning/optimization is occurring, it can be helpful to follow a few metrics:
+
+#### Loss Function
+
+<figure>
+  <img src="..\images\edu_imgs\ml\loss_metric.png" alt="Grey vs. White Matter"/>
+</figure>
+
+#### Accuracy
+
+<figure>
+  <img src="..\images\edu_imgs\ml\acc_metric.jpg" alt="Grey vs. White Matter"/>
+</figure>
+
+### Recap:
+1.	Neural Networks are a bunch of connected neurons/units that have weights attached to them that output a value given a combination of inputs
+2.	The goal is to teach this model to understand what a correct answer looks like by learning what weights help push the model output to the correct answer
+3.	Choosing the correct regularization and optimization strategy is critical to success
