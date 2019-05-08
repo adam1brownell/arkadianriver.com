@@ -1,0 +1,45 @@
+---
+layout: post
+mathjax: true
+title: "Intro to Machine Learning VII"
+excerpt: "How to Neural Nets Process Images?"
+date: 2019-03-02
+categories:
+  - edu_bank
+background-image: edu_imgs/ml.png
+---
+
+## <u>Convolutional Neural Networks (CNN)</u>: Neural Nets that "understand" images
+
+Our last post covered the traditional neural network structure, a Feed Forward Neural Network: there is an input layer, that is connected to a hidden layer, that is connected to the output layer. But there a BUNCH of different ways to build a neural network. One of those ways is a Convolutional Neural Net.
+
+A Convolutional Neural Net (CNN) are the same as regular nets-- with inputs, neurons, score/loss functions, etc-- except that they assume all inputs are images, allowing us to make a few changes.
+**CNN Input Changes**: Any reasonable image size ( 200px by 200px by 3 color channels) in a regular neural net requires over 100,000+ weights and even more hyperparameters. CNN solve this by using 3D inputs and outputs, and each neuron is only connected to a small subset of nearby inputs instead of being fully connected to the next layer
+
+**CNN Hidden Layer Changes**: CNNs have specialized series of layers to deal with their unique input by focusing on a small subregion of space and eventually branching upwards in scope
+- **Convolution Layers** take raw input and look at small subregions, computing dot product of their weight and inputs
+- **ReLu Layers** apply ReLu (or similar nonlinear function) as activation function
+- **Pool Layers** pool together ReLu inputs and reduce dimensions
+- **Fully Connected Layer** computers class scores like a regular net
+
+A common CNN architecture is to stack a few conv-relu layers together followed by a pooling layer. This is repeated until the image is shrunk to a small size that is perfect for a fully connected layer. Stacking several conv layers is much better than 1 large conv layer because not only does each successive gain a larger receptive field because it analyzes the previous layers, but also reduces the number of parameters required to do so.
+
+**CNN Output Changes**: There are several hyperparameters unique to CNNs to consider. **Depth** is the number of filters (conv-relu layers) we are using. Successive filters may learn to look for different edges, blobs, or colors. Filter neurons all looking at the same region of space are collectively called a **depth column**. Stride is how many pixels to move the filter as we move across neurons. **Zero-Padding** is the margin of 0s around the input volume. This allows us to control the spatial size of the output, so differently sized photos aren’t a problem.
+
+We can also dramatically reduce the number of parameters by using **Parameter Sharing**. We can assume features that are important to one area of an image are important to other areas, so we can force neurons of similar depth/filter (depth slice) to share weights. Essentially, all neurons within a filter share 1 set of parameters. A convolution is a math term for when 2 functions produce a 3rd-- which, if each depth slice is using the same weights, is exactly the relationship between the input and the filter… Hence the name Convolutional Neural Network!
+
+### Transfer Learning and Fine-Tuning
+
+When building a CNN, it is common practice to NOT start from scratch and initialize weights randomly. Instead, we often use what worked best for another pretrained network. This is because training a CNN can take up to several WEEKS to get decent results, and so starting with weights of a CNN trained on a similar problem can save you some time. Ideally, this process of using a pre-trained network’s weights as your starting weights will result in **transfer learning**, where the knowledge gained from a different but related problem will inform the learning process of your problem. A few famous CNNs to consider:
+- **LeNet**: First successful CNN. Built by Yann LeCun in 1990
+- **AlexNet**: Developed by Alex Krizhevsky and won the 2012 ILSVRC by an enormous margin (16% error vs. 26% error runner up)
+- **ZF Net**: ILSVRC 2013 Winner. Improved on AlexNet by having larger middle convolutional layers
+- **GoogLeNet**: ILSVRC 2014 Winner. Google’s net that introduced the idea of “Inception Mode” that reduced the number of parameters
+- **VGGNet**: ILSVRC 2014 Runner Up. Demonstrated that depth of network is critical to success
+- **ResNet**: ILSVRC 2015 Winner. Features skip connections, and no fully connected layer at the end of the CNN
+
+Once a pretrained network is chosen for transfer learning, ML Engineers will typically remove the last layer of the pretrained network. This treats the remaining CNN as a form of feature extraction for your problem, and you can train a new classifier on the output of the pretrained network and your desired class score. If your dataset is quite different from what the pretrained network is used to, it may be better to cut off more layers of the pretrained network to make the feature extraction more generalized. Sometimes you can fine-tune your pretrained network output by continuing backpropagation during your training-- just be careful of overfitting!
+
+### Recap:
+1.	Convolutional Neural Networks are machine learning models efficient at understanding images due to their various departures from regular neural networks
+2.	Using a pretrained network for your problem is ideal to save you computational power and time
