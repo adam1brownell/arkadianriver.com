@@ -11,6 +11,11 @@ background-image: edu_imgs/neuron.jpg
 ## <u>Gustation & Olfaction</u>: How to taste a taste, or smell a smell
 
 ### Taste
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/taste.jpg" alt="Action Potential" style="width:550px;height:400px;"/>
+</figure><br>
+
 **Gustation** is the fancy word for taste. Taste is typically broken down into 5 **flavors**, each flavor loosely correlating with a specific ion channel opening:
 - Salty is due to Na+ channels (salt!)
 - Sour is due to K+ channels
@@ -22,6 +27,11 @@ These flavors are sensed by the 6 – 10k taste buds we have on our **tongue**. 
 When an action potential is created through transduction, the impulse travels up cranial nerves VII, IX, and X to the thalamus and then to the taste region of the cortex.
 
 ### Smell
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/nose.jpg" alt="Nose" style="width:550px;height:400px;"/>
+</figure><br>
+
 **Olfaction** is the fancy word for smell. Smell is sensed by thousands of odorant receptors. **Odorant Receptors** are chemically sensing receptors inside the nose that have many proteins that bind to very specific odorant molecules (smells). This binding activates cAMP—_recall this is a second messenger protein_—which in turn opens Na+ channels and causes an action potential.
 
 When we breath in, air rushed over our **olfactory epithelium**, a 2cm^2 region within our nasal cavity where all our odorant receptors are located. Each breath exposes our odorant receptors to a large variety of chemicals/smells, causing a large variety of action potentials to fire. All these action potentials are consolidated by the **Olfactory Bulb**, a region right above our nasal cavity.

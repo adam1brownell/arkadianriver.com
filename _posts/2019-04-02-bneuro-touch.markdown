@@ -11,6 +11,11 @@ background-image: edu_imgs/neuron.jpg
 ## <u>Touch and Pain</u>: How the Brain processes physical sensations
 
 ### Sensations to Brain Signals
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/homunculus.gif" alt="Action Potential" style="width:500px;height:400px;"/>
+</figure><br>
+
 Before we can talk about our senses, we need to answer the glaring question: “How does a physical sense turn into something the brain can understand?” This is done through **transduction**, the process of converting energy/signal into an electrical signal that can travel through the nervous system to the brain. In essence, transmuting a stimulation into an action potential.
 
 This is done by specialized cells that respond to outside stimulus by opening or closing ion channels. As we learned previously, this is how action potentials are created. **Metabotropic Transduction** is when an outside molecule, such as a smell molecule or a photon, binds to a receptor, releasing a G protein and opening ion channels. **Ionotropic Transduction** is when outside energy, such as heat or electricity, interacts with the receptor and opens the channel directly.
@@ -31,6 +36,11 @@ If a body part or the nerves connected the body part to the brain are removed, t
 **Phantom Limb** is the phenomena in which a person feels like their missing body part is actually there – this is due to the cortical area previously associated with the body part is being stimulated the encroaching cortical regions, but the brain is still attributing it to the old body part.
 
 ### Somatosensory Signals
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/touch.jpg" alt="Action Potential" style="width:600px;height:300px;"/>
+</figure><br>
+
 **Touch** is (obviously) the sensation you feel when something applies pressure to your skin. First, think of how cool it is that by pressing on your skin, you are creating action potentials in touch receptors. You have four different touch receptors that serve different purposes:
 - Deep, large, and phasic receptors (**Pacinian Corpuscle**) that communicate vibration and heavy pressure
 - Deep, large, and tonic receptors (**Ruffini’s Endings**) that communicate stretching

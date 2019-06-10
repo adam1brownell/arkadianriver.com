@@ -19,9 +19,17 @@ The light then hits the retina in the back of the eye, where the light is change
 A quick not about eye movement—our eyes **saccade**, or jump, 3-4 times a second. Vision is not a continuous movement, but rather a series of ¼ second glimpses. Watch someone look from left to right, their eyes will make a series of short jumps! We can only move our eyes smoothly when following when tracking a moving object.
 
 ### The Retina
-The basic anatomy of the retina, for reference later, is:
 
-      rods/cones -> bipolar cells -> ganglion cells -> optic nerve
+<figure>
+  <img src="../images/edu_imgs/bneuro/retina.jpg" alt="Nose" style="width:550px;height:400px;"/>
+</figure><br>
+
+The basic anatomy and order of the retina, for reference later, is:
+
+1. Rods/Cones
+2. Bipolar Cells
+3. Ganglion Cells
+4. Optic Nerve
 
 We will slowly walk through each of these layers, but make sure you have a clear picture in your head about all the retina structures as you go along. What you should also know before you begin is that despite being the 3rd layer of vision cells, the ganglion cells are the vision cells that actually fire action potentials.
 
@@ -39,6 +47,10 @@ The Retina is also home to the **Optic Disc**, where both blood vessels and gang
 
 ### Photoreceptors & Phototransduction
 
+<figure>
+  <img src="../images/edu_imgs/bneuro/photoreceptor.png" alt="Nose" style="width:550px;height:400px;"/>
+</figure><br>
+
 The actual conversion of light into electrical impulse is done by **photoreceptors**, or rod and cone cells. **Rods** work on low levels of light, are found on the peripherals of our vision, and are responsible for detecting general movement/changes (very helpful in the dark). **Cones** work at high levels of light, are found in the center of the eye, and are responsible for visual sharpness and color vision.
 
 To account for the color inputs, there are three types of cones: long (for yellow) medium (for green) and short (for violet). While the existence of the specialized cells is agreed upon, the way in which we reconcile these three colors in our heads is still hotly debated. Also—7% of males have red/green colorblindness because the genes for long and medium cones is on the X Chromosome (more on this in the Sex section).
@@ -54,6 +66,10 @@ The actual chemical events that cause phototransduction are as follows:
 3.	PDE molecules rapidly break down nearby cGMP at a rate of 4000/sec. The rapid decline of cGMP causes cGMP-gated Na+ channels to close, and the photoreceptor hyperpolarizes.
 
 ### Lateral Inhibition
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/illusion.jpg" alt="Nose" style="width:600px;height:400px;"/>
+</figure><br>
 
 Now we have a hyperpolarized cell, but we still have a few steps until we generate an action potential. Recall the structure of the retina, as it is crucial for understanding this section. As we said earlier, photoreceptors (rods and cones) are hyperpolarized by light and depolarized by darkness. This means that when they are unstimulated (in the dark), they are releasing a steady stream of glutamate into nearby cells, and “turn off” when light shines on them.
 
@@ -72,11 +88,19 @@ The goal of our visual system is to create a 3D representation of the world from
 
 ### LGN
 
+<figure>
+  <img src="../images/edu_imgs/bneuro/lgn.jpg" alt="Nose" style="width:400px;height:400px;"/>
+</figure><br>
+
 First, remember that we process information from the right side of our body in the left side of our brain, and information from the left side of our body in the left side of our brain. The same is true for our eyes, and so the input into the optic nerve is crossed before it reaches its first destination within the brain—which is the **Lateral Geniculate Nucleus (LGN)**.  The LGN is a relay pathway in the Thalamus specifically designed for visual stimulus; any sensory information that enters consciousness passes through here (reflex-related stimuli are directed elsewhere). It contains two types of cells: parvocellular (P cells) and magnocellular (M cells). **P cells** are small with about one P cell for every retinal ganglion cells, meaning P cells maintain the center/surround field. Because of this replication of ganglion cells, P cells are slow to change firing rates. **M cells** have a large receptive field, taking in the inputs of many P cells and rapidly adapting their firing rate to changing stimulus. There are around 100,000 per eye, a relatively small number when compared to how many P cell and ganglion cell inputs M cells are receiving.
 
 The LGN has 6 layers, with 4 of those layers containing P cells and 2 containing M cells. Between layers 2-3 and 3-4 there are color detectors called **koniocellular cells**. The reason for these layers is to utilize **parallel processing**, or the ability to analyze multiple things are the same time, as well as for verifying quality and topography of a visual stimulus. As you will see, the visual system often feeds the visual input back onto itself to reanalyze after learning some additional information.
 
 ### V1
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/v1.jpg" alt="Nose" style="width:550px;height:400px;"/>
+</figure><br>
 
 **V1** brain region is the primary visual cortex, located in the back of the head. It receives input from multiple layers of the LGN and is made up simple cells, complex cells, and hypercomplex cells. **Simple cells** are sensitive to orientation, and only respond when a stimulus has a particular stripe in the correct orientation. This means that a perfectly straight line may activate a certain simple cell, but a diagonal line in the same place will not. In the context of vision, these “lines” typically mean edges between lighter and darker areas of the visual field; in addition. **Complex cells** take in a combination of simple cell inputs, building up a hierarchy of cells. **Hypercomplex cells** do the same thing as complex cells, only they stop firing if a stimulus continues for so long. The ‘message’ from a single cell is ambiguous, since the firing rate.
 

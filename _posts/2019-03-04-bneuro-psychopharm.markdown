@@ -13,6 +13,11 @@ background-image: edu_imgs/neuron.jpg
 Pharmacology is the attempt to influence biological systems (and their disorders) with drugs, and so **psychopharmacology** is the attempt to assuage problems found in mental systems with drugs. We will first discuss the different compounds and pathways present in the brain, and then talk about the effects common drugs have on these pathways.
 
 ### Common Neurotransmitters
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/neurotransmitter.jpeg" alt="Action Potential" style="width:700px;height:400px;"/>
+</figure><br>
+
 **Acetylcholine (ACH)** is integral to the “rest and digest” response in the Parasympathetic Nervous System. Triggers actions such as the slowing of heart rate and increased intestinal/gland activity. Found in the _chologinergic_ pathway of the brain involving the cortex, hippocampus, and cerebellum. An imbalance in ACH levels has been linked to Alzheimer’s Disease.
 
 **Dopamine (DA)** is involved in our reward system and movement. These two functions are quite diverse, and so DA emerges from two different pathways in the brain: the DA movement pathway found in the substantia nigra and basal ganglia, and the DA reward system pathway passing through the _ventral tegmental area (VTA)_ and the limbic system. A surplus of DA has been linked to schizophrenia, and a scarcity of DA is linked to Parkinson’s Disease. Due to its close relation with the reward system, large dopaminergic responses to a drug/stimulus/behavior is often a major sign of addiction.
@@ -24,6 +29,9 @@ Pharmacology is the attempt to influence biological systems (and their disorders
 **Glutamate** is the most common excitatory neurotransmitter. The most common glutamate receptors are **AMPA**, **Kainate**, and **NMDA** receptors. **GABA** is the most common inhibitory neurotransmitter. The most common GABA receptors are **GABA-A**, **GABA-B**, and **GABA-C** (creative names).
 
 ### Drugs
+
+<iframe src="https://giphy.com/embed/phko4kpHl6uLC" width="480" height="350" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
 
 **Antidepressants** work by accumulating monoamines and prolonging their activity. There are three kinds of antidepressants:
 - **Monoaminic oxidase inhibitors (MOAIs)** work by preventing the breakdown of monoamines, increasing the amount found in synaptic vesicles

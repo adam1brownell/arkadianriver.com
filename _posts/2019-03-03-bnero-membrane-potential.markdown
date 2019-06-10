@@ -1,5 +1,6 @@
 ---
 layout: post
+mathjax: true
 title: "Behavioral Neuroscience III"
 excerpt: "How do Neurons Work?"
 date: 2019-03-18
@@ -22,12 +23,13 @@ Eventually the cell and outside Na+ reach a ceasefire, where the pressure from t
 
 This ceasefire, or when the pressure of Na+ inside the cell due to the positive charge equals the strength of the Na+ outside wanting to diffuse, is called the **Equilibrium Potential**, and it is a fundamental way that neuron communication works.
 
-
 ### Equilibrium Potential & Relative Permeability
 
 At Equilibrium Potential, the cell has a charge from all the ions that flooded inside. You can calculate the Equilibrium Potential for each ion with the **Nernst Equation**:
 
-        E=58mV*log⁡((Concentration outside)/(Concentration inside))
+$$
+ E = 58mv*log(\frac{Concentration Outside}{Concentration Inside})
+$$
 
 \*For the math inclined, you can see that if the concentration inside and outside was the same, the charge would be 0, because the log(1) = 0. But that is never the case due to the voltage within the cell\*
 
@@ -46,7 +48,9 @@ It is important to know that neurons have a thick membrane called the Phospholip
 
 ### Action Potentials
 
-*Picture of resting potential over an action potential*
+<figure>
+  <img src="../images/edu_imgs/actionpotential.png" alt="Action Potential" style="width:700px;height:600px;"/>
+</figure><br>
 
 
 Prior to an action potential, a neuron is at resting potential. It then receives a signal from a nearby cell, which causes the cell to **depolarize**, or gain a positive charge, ever so slightly. This slight depolarization causes a tiny amount of voltage-gated sodium channels to open, which allows more Na+ ions inside, which causes the cell to depolarize even more. Neurons work on an **All-or-None Activation**, where the neuron either fully triggers an action potential, or doesn’t fire at all—there is not stronger or weaker neuron action potential. What causes a full action potential is if the depolarization from a nearby action potential pushes the cell above the Threshold. The **Threshold**, also called the **Trigger Event**, is the point at which as the cell becomes more depolarized, more sodium channels open, allowing more Na+ to enter, causing the cell to depolarize even further. This **Domino Effect** of depolarization-Sodium Channels-Na+ influx-depolarization pushes the membrane potential very quickly to the Na+ Equilibrium Potential of +50mV—Sodium overwhelms the neuron.

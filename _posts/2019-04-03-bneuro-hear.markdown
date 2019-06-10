@@ -10,9 +10,13 @@ background-image: edu_imgs/neuron.jpg
 
 ## <u>The Ear</u>: How Hearing & Balancing Work
 
-<u>Disclaimer</u>: Understanding how the ear works is really hard without a visual. This is because the ear has so many tiny parts are just a bunch of weird shapes. Ears are weird. There are a lot of parts to the ear, so I have narrowed it down just enough for us to understand how hearing works without being overwhelmed by vocab. Hopefully.
+<u>Disclaimer</u>: Understanding how the ear works is really hard without a anatomical vocabulary. This is because the ear has so many tiny parts are just a bunch of weird shapes. Ears are weird. There are a lot of parts to the ear, so I have narrowed it down just enough for us to understand how hearing works without being overwhelmed by vocab. Hopefully.
 
 ### Hearing
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/ear.gif" alt="Action Potential" style="width:550px;height:400px;"/>
+</figure><br>
 
 Before we talk about hearing, we have to talk about sound. Sound travels in waves at a **frequency**, which is cycles per second—how many times the waves goes up in down in a second. The goal of the ear (and hearing) is to capture these frequencies, from a bunch of different sources, and translate them into action potentials so our brain can interpret them.
 
@@ -31,6 +35,10 @@ While being far less in number, the inner hair cells are the ones literally resp
 If you lose enough hair cells, you can go deaf or become hard of hearing. **Cochlear implants** help fight deafness by stimulating the auditory nerve in multiple (6 -32) places, providing the user with more tone frequencies to utilize.
 
 ### Balance
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/balance.jpg" alt="Action Potential" style="width:550px;height:400px;"/>
+</figure><br>
 
 Hearing and balance were grouped together because both senses are found in the inner ear. While hearing is centered around the cochlea, balance is found in the semi-circular canals. The **semicircular canals** are three paired canals that sit are 90 degrees to each other, corresponding to all three dimensions. Each canal has hair cells in pockets of space filled with a gelatinous mass called **cupulla**. Just like hair cells in the ear, these hair cells bend as the liquid around the moves, causing K+ channels to open. It should be noted that ear hairs do not fire the action potentials themselves, they open gates that allow secondary cells to fire. These hair cells are connected to **cranial nerve VIII**, which is made up of 20,000 cells, which leads into the brainstem.
 

@@ -11,6 +11,11 @@ background-image: edu_imgs/neuron.jpg
 ## <u>Development</u>: How Brains Grow
 
 ### Brain Evolution
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/brain_meme.jpg" alt="Action Potential" style="width:400px;height:600px;"/>
+</figure><br>
+
 First, before we discuss how our brains develop, we should answer the question:
 Why are our brains so special? Why are human brains so much _better_ than other animals?
 Answer: **We are not Special.** Human brains are not as special as we like to think...
@@ -30,6 +35,12 @@ What we also have is a very large critical thinking area of the brain-- unmatche
 This push to be social early in our evolution may explain why our brains are the way they are.
 
 ### Brain Development
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/development.png" alt="Action Potential" style="width:600px;height:400px;"/>
+</figure><br>
+
+
 Humans start off as a **zygote**, or fertilized egg, and then grow into a **blastocyst**, or ball of dividing cells. Blastocysts can be generally broken down into three cell layers and one of these layers, the Ectoderm, will develop into the Brain and nervous system. From this step there are six stages of brain development, each covered below:
 1.	**Neurogenesis:** Brain cells are produced from stem cells and group together in the ventricular zone
 2.	**Cell Migration:** Brain cells start to move away from the ventricular zone by crawling up radical glial cells which act as “ladders” spanning the length of the cortex. Brain cells start forming layer on top of layer until there are 6 layers of cells

@@ -24,6 +24,11 @@ Hormones are regulated different negative feedback loops, meaning that the more 
 The ultimate controller of all feedback loops is the **Hypothalamus**. The hypothalamus controls most of the endocrine system and it’s main glands: pituitary, pineal, pancreas, and gonads. Each gland has its own set of hormones it can release.
 
 ### Glands
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/glands.jpg" alt="Action Potential" style="width:500px;height:400px;"/>
+</figure><br>
+
 The **Pituitary Gland** is directed below the Hypothalamus and is actually split into two different glands: Posterior (back) Pituitary and Anterior (front) Pituitary.
 
 The **Posterior Pituitary** is connected directly to the Hypothalamus through long neurons/axons called **pituitary stalks**. It releases two hormones: Vasopressin and Oxytocin. **Vasopressin** acts on the kidney to conserve/regulate water in the blood by inhibiting the formation of urine. **Oxytocin** in females is released during childbirth to stimulate contractions and triggers milk letdown during nursing. Interestingly, it is released when hearing a baby cry and during orgasm, so it is theorized to promote bonding… sometimes it is called the “Love Hormone.” Outside of these instances, research also shows the Posterior Pituitary is important for bonding: Oxytocin promotes pair-bonds in females, and Vasopressin promotes pair-bonds in males.
@@ -43,6 +48,10 @@ The **Pineal Gland** is a tiny gland at the top of the brainstem. It releases me
 The **Pancreas** sits right behind the stomach and is actually controlled by the **Vagas Nerve**, not the Pituitary/Hypothalamus. It releases two competing hormones: **Insulin**, which decreases blood sugar in anticipation of a meal, and **Glucagon** which increases blood sugar afterwards.
 
 ### Sex and the Brain
+
+<figure>
+  <img src="../images/edu_imgs/bneuro/sex.png" alt="Action Potential" style="width:700px;height:400px;"/>
+</figure><br>
 
 This is not a sex-ed recap, but rather a quick look at the effects of sex hormones on the nervous system and body. Despite the potential, talking about sex in behavioral neuroscience is not as sexy as one would hope.
 
